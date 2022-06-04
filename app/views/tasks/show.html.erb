@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<p class="alert alert-dark"><%= @task.details %></p>
+<% if @task.completed %>
+  <p>This task has been completed</p>
+<% else %>
+  <p>This task has <strong>not</strong> been completed</p>
+<% end %>
+<p><%= link_to "Edit task", edit_task_path(@task), class: 'btn btn-primary' %></p>
+<hr>
+<%= link_to 'Back to task list', tasks_path, class: 'btn btn-outline-primary' %>
